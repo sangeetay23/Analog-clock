@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.clock {
+    position: relative;
+    border: 4px solid #fff;
+    height: 60vmin;
+    width: 60vmin;
+    border-radius: 50%;
+    background-color: #1A1B1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand {
+    position: absolute;
+    background-color: #fff;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hour-hand {
+    background-color: green;
+    width: 1.2vmin;
+    height: 25%;
+    border-radius: 1.2vmin;
+}
+
+#min-hand {
+    background-color: yellow;
+    width: 0.8vmin;
+    height: 35%;
+    border-radius: 0.8vmin;
+}
+
+#sec-hand {
+    background-color: red;
+    width: 0.5vmin;
+    height: 40%;
+}
+
+.center {
+    height: 2vmin;
+    width: 2vmin;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.number {
+    position: absolute;
+    color: #fff;
+    font-size: 4vmin;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+.number1 { top: 16%; left: 63%; }
+.number2 { top: 30%; left: 76%; }
+.number3 { top: 50%; left: 82%; }
+.number4 { top: 70%; left: 76%; }
+.number5 { top: 83%; left: 63%; }
+.number6 { top: 88%; left: 50%; }
+.number7 { top: 83%; left: 37%; }
+.number8 { top: 70%; left: 24%; }
+.number9 { top: 50%; left: 18%; }
+.number10 { top: 30%; left: 24%; }
+.number11 { top: 16%; left: 37%; }
+.number12 { top: 10%; left: 50%; }
+
+#toggle-button {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5em 1em;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-button:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+    .clock {
+        height: 80vmin;
+        width: 80vmin;
+    }
+    .number {
+        font-size: 5vmin;
+    }
+    #toggle-button {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+    }
+}
+
+@media (max-width: 400px) {
+    .clock {
+        height: 90vmin;
+        width: 90vmin;
+    }
+    .number {
+        font-size: 6vmin;
+    }
+    #toggle-button {
+        font-size: 0.8em;
+        padding: 0.3em 0.6em;
+    }
+}
